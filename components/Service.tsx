@@ -2,12 +2,8 @@ import React from 'react'
 import Link from 'next/link';
 import styles from '@/styles/Service.module.css';
 
-interface ServiceProps { // la interfaz "Props" define los dos parámetros que necesita el componente
-    tarifas: string;
-    moviles: string;
-  }
 
-const Service: React.FC<ServiceProps> = ({tarifas, moviles}) => {
+const Service: React.FC = () => {
   return (
     <div className={styles.div}>
         <Link //habilitar la navegación del lado del cliente entre páginas
@@ -17,7 +13,7 @@ const Service: React.FC<ServiceProps> = ({tarifas, moviles}) => {
             rel="prerender"
         >
             <h2 className={styles.text}>
-              {tarifas} 
+              Tarifas
             </h2>
         </Link>
 
@@ -28,7 +24,7 @@ const Service: React.FC<ServiceProps> = ({tarifas, moviles}) => {
             rel="prerender"
         >
             <h2 className={styles.text}>
-              {moviles}
+              Móviles
             </h2>
         </Link>
     </div>

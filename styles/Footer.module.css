@@ -1,13 +1,27 @@
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    background-color: #000000;
-  }
-  
-.h1 {
-    color: #00ff00;
-    font-size: 2rem;
-    text-align: center;
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: #000000;
+}
+
+.footer div {
+  margin: 0 3rem;
+}
+
+.footer h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #00ff00;
+}
+
+.footer li {
+  margin-bottom: 0.5rem;
+}
+
+.footer a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff;
 }

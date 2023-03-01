@@ -4,6 +4,7 @@ import PageHead from '@/components/PageHead';
 import Header from '@/components/Header'
 import Service from '@/components/Service'
 import AdBanner from '../components/AdBanner';
+import AdVideo from '../components/AdVideo';
 import Footer from '@/components/Footer'
 
 import styles from '@/styles/Home.module.css'
@@ -19,29 +20,19 @@ export default function Home() {
         keywords={['TFM', 'next.js', 'typescript']}
       />
 
-      <Header title="TFM" />
+      <Header />
 
       <main className={styles.main}>
 
-        <Service tarifas="Tarifas" moviles="Móviles"/>
-
-        <div>
-          <h1>
-            Banner publicidad
-          </h1>
-        </div>
+        <Service />
 
         <AdBanner />
 
-        <div>
-          <h1>
-            Vídeo promoción
-          </h1>
-        </div>
+        <AdVideo />
 
       </main>
 
-      <Footer title="Footer" />
+      <Footer />
     </>
   )
 }

@@ -16,11 +16,11 @@ const tarifas = () => {
         keywords={['TFM', 'next.js', 'tarifas']}
       />
 
-      <Header title="Header"/>
+      <Header />
 
       <main className={styles.main}>
 
-        <Service tarifas="Tarifas" moviles="Móviles"/>
+        <Service />
 
         <div>
           <h1>
@@ -30,7 +30,7 @@ const tarifas = () => {
 
       </main>
 
-      <Footer title="Footer" />
+      <Footer />
 
     </>
   )

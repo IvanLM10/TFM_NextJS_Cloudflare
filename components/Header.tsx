@@ -1,14 +1,16 @@
 import React from 'react'
 import styles from '@/styles/Header.module.css';
+import Link from 'next/link';
 
-interface HeaderProps {
-    title: string;
-  }
-
-const Header: React.FC<HeaderProps> = ({title}) => {
+const Header: React.FC = () => {
     return (
         <div className={styles.container}>
-          <h1 className={styles.h1}>{title}</h1>
+          <Link 
+            href="/"
+            rel="prerender"
+        >
+            <h1 className={styles.h1}>TFM</h1>
+        </Link>
         </div>
     );
 }
