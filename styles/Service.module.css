@@ -8,9 +8,6 @@
 .card {
     padding: 1rem;
     border-radius: var(--border-radius);
-    background: rgba(var(--card-rgb), 0);
-    border: 1px solid rgba(var(--card-border-rgb), 0);
-    transition: background 200ms, border 200ms;
     background-color: #f6ff33;
 }
 

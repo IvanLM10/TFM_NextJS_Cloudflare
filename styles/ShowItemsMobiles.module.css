@@ -5,8 +5,8 @@
 }
 
 .item {
-    border-radius: var(--border-radius);
-    border: 1px solid rgba(var(--card-border-rgb), 5);
+    border-radius: var(--border-radius); 
+    border: 2px solid rgba(var(--card-border-rgb), 1);
 }
 
 .text {
