@@ -51,11 +51,9 @@ const tarifas = () => {
 
       <main className={styles.main}>
 
-        <Service />
-
         <div>
           <h1>
-            Tarifas
+            TARIFAS
           </h1>
         </div>
 

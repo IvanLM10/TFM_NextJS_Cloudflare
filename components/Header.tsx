@@ -5,14 +5,30 @@ import Image from 'next/image';
 
 const Header: React.FC = () => {
     return (
-        <div className={styles.container}>
-            <Link 
-                href="/"
-                rel="prerender"
-            >
-                <Image src="images/next.svg" alt="Logo Next.js" width={300} height={85}/>
-            </Link>
+        <header className={styles.header}>
+        <div className={styles.top}>
+          <div className={styles.left}>Particulares - Autónomos y Empresas</div>
+          <div className={styles.right}>Si no eres cliente, llámanos gratis - 123 456 789</div>
         </div>
+
+        <div className={styles.bottom}>
+          <div className={styles.logo}>
+            <Link href="/" rel="prerender">
+              <Image src="images/next.svg" alt="Logo Next.js" width={139} height={40}/>
+            </Link>
+          </div>
+
+          <div className={styles.service}>
+            <Link className={styles.link} href="/tarifas" rel="prerender">
+              TARIFAS
+            </Link>
+
+            <Link className={styles.link} href="/moviles" rel="prerender">
+              MÓVILES
+            </Link>
+          </div>
+        </div>
+      </header>
     );
 }
 

@@ -1,15 +1,12 @@
-//import { Inter } from 'next/font/google'
-
 import PageHead from '@/components/PageHead';
 import Header from '@/components/Header'
 import Service from '@/components/Service'
 import AdBanner from '../components/AdBanner';
 import AdVideo from '../components/AdVideo';
 import Footer from '@/components/Footer'
+import Prueba from '@/components/Prueba'
 
 import styles from '@/styles/Home.module.css'
-
-//const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -23,8 +20,6 @@ export default function Home() {
       <Header />
 
       <main className={styles.main}>
-
-        <Service />
 
         <AdBanner />
 

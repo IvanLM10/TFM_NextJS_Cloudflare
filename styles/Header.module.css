@@ -1,13 +1,48 @@
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    background-color: #f6ff33;
-  }
-  
-.h1 {
-    color: #000000;
-    font-size: 2rem;
-    text-align: center;
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  height: 30px; 
+  background-color: #f6ff33;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom {
+  height: 60px; 
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  text-align: left;
+  margin-left: 20px; 
+  font-size: 14px;
+}
+
+.right {
+  text-align: right;
+  margin-right: 20px; 
+  font-size: 14px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; 
+}
+
+.service {
+  width: var(--max-width);
+}
+
+.link {
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 14px;
 }

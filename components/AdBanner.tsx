@@ -1,8 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 
-//quitar img; usar <Image />
-
 const AdBanner: React.FC = () => {
   return (
     <div>

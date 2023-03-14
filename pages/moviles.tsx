@@ -51,11 +51,9 @@ const moviles = () => {
 
       <main className={styles.main}>
 
-        <Service />
-
         <div>
           <h1>
-            Móviles
+            MÓVILES
           </h1>
         </div>
 
