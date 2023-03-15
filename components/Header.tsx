@@ -14,7 +14,7 @@ const Header: React.FC = () => {
         <div className={styles.bottom}>
           <div className={styles.logo}>
             <Link href="/" rel="prerender">
-              <Image src="images/next.svg" alt="Logo Next.js" width={139} height={40}/>
+              <Image src="/images/masmovil_negro.png" alt="Logo Next.js" width={139} height={35}/>
             </Link>
           </div>
 

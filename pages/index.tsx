@@ -1,6 +1,5 @@
 import PageHead from '@/components/PageHead';
 import Header from '@/components/Header'
-import Service from '@/components/Service'
 import AdBanner from '../components/AdBanner';
 import AdVideo from '../components/AdVideo';
 import Footer from '@/components/Footer'

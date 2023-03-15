@@ -1,27 +1,29 @@
 .footer {
+  background-color: black;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 1rem;
-  background-color: #000000;
+  flex-wrap: wrap;
 }
 
-.footer div {
-  margin: 0 3rem;
+.col {
+  flex: 1;
 }
 
-.footer h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: #f6ff33;
-}
-
-.footer li {
+.h3 {
+  font-size: 16px;
+  color: yellow;
   margin-bottom: 0.5rem;
 }
 
-.footer a {
-  text-decoration: none;
-  font-size: 1rem;
-  color: #ffffff;
+.p {
+  font-size: 14px;
 }

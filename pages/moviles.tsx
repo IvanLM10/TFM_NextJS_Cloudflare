@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 
 import PageHead from '@/components/PageHead'
 import Header from '@/components/Header'
-import Service from '@/components/Service'
 import Items from '@/components/ShowItemsMobiles'
 import Pagination from '@/components/Pagination'
 import Footer from '@/components/Footer'
@@ -13,6 +12,7 @@ import styles from '@/styles/Home.module.css'
 type Item = {
   id: number;
   title: string;
+  image: string;
   price: string;
 };
 

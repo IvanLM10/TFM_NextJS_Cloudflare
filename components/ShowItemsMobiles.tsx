@@ -3,6 +3,8 @@
 import React from 'react';
 import styles from '@/styles/ShowItemsMobiles.module.css';
 
+import Image from 'next/image';
+
 type Props = {
   data: any[];
 };
@@ -12,6 +14,7 @@ const ShowItemsTariffs = ({ data }: Props) => (
     {data.map((item) => (
       <div className={styles.item} key={item.id}>
         <h3 className={styles.text}>{item.title}</h3>
+        <Image src={item.image} alt="Imagen móvil" width={170} height={170}/>
         <br></br>
         <p className={styles.p}>{item.price}</p>
       </div>

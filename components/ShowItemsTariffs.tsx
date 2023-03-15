@@ -12,8 +12,9 @@ const ShowItemsTariffs = ({ data }: Props) => (
     {data.map((item) => (
       <div className={styles.item} key={item.id}>
         <h3 className={styles.text}>{item.title}</h3>
-        <br></br>
-        <p className={styles.p}>{item.price}</p>
+        <p><br></br>{item.description1}</p>
+        <p><br></br>{item.description2}</p>
+        <p className={styles.p}><br></br>{item.price}</p>
       </div>
     ))}
   </div>
