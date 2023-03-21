@@ -3,7 +3,6 @@ import Header from '@/components/Header'
 import AdBanner from '../components/AdBanner';
 import AdVideo from '../components/AdVideo';
 import Footer from '@/components/Footer'
-import Prueba from '@/components/Prueba'
 
 import styles from '@/styles/Home.module.css'
 

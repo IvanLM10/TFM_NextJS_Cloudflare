@@ -18,7 +18,7 @@ type Item = {
 
 const PER_PAGE = 2; // Elementos por página
 
-const moviles = () => {
+const Moviles = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [items, setItems] = useState<Item[]>([]);
 
@@ -69,4 +69,4 @@ const moviles = () => {
   )
 }
 
-export default moviles
+export default Moviles

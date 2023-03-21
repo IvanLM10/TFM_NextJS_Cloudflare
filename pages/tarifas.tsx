@@ -19,7 +19,7 @@ type Item = {
 
 const PER_PAGE = 2; // Elementos por página
 
-const tarifas = () => {
+const Tarifas = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [items, setItems] = useState<Item[]>([]);
 
@@ -70,4 +70,4 @@ const tarifas = () => {
   )
 }
 
-export default tarifas
+export default Tarifas
