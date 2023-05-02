@@ -21,7 +21,6 @@
   display: block;
   padding: 5px 10px;
   border: 1px solid #333;
-  border-radius: 5px;
 }
 
 .pagination a:hover {
@@ -29,10 +28,6 @@
   color: #fff;
 }
 
-.pagination__link--active {
-  background-color: #333;
-  color: #fff;
+.active {
+  background-color: yellow;
 }
-
-
-  

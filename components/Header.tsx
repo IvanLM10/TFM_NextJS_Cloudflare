@@ -1,7 +1,10 @@
 import React from 'react'
-import styles from '@/styles/Header.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+
+import styles from '@/styles/Header.module.css';
+
+const logo = "/images/masmovil_negro.png";
 
 const Header: React.FC = () => {
     return (
@@ -13,12 +16,12 @@ const Header: React.FC = () => {
 
         <div className={styles.bottom}>
           <div className={styles.logo}>
-            <Link href="/" rel="prerender">
-              <Image src="/images/masmovil_negro.png" alt="Logo Next.js" width={139} height={35}/>
+            <Link href="/">
+              <Image src={logo} alt="Logo MasMovil" width={139} height={35}/>
             </Link>
           </div>
 
-          <div className={styles.service}>
+          <div>
             <Link className={styles.link} href="/tarifas" rel="prerender">
               TARIFAS
             </Link>
@@ -26,6 +29,17 @@ const Header: React.FC = () => {
             <Link className={styles.link} href="/moviles" rel="prerender">
               MÓVILES
             </Link>
+          </div>
+
+          <div className={styles.end}>
+            <div className={styles.help}>
+              Ayuda
+            </div>
+            <div className={styles.client}>
+              <div>
+                Soy Cliente
+              </div>
+            </div>
           </div>
         </div>
       </header>

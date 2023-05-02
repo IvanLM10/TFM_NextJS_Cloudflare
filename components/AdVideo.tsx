@@ -1,11 +1,16 @@
 import React from 'react';
+import YouTube from 'react-youtube';
 
 const AdVideo: React.FC = () => {
-  return (
-    <div>
-      <video src="videos/video.mp4" controls/>
-    </div>
-  );
+  try {
+    return (
+      <div>
+        <YouTube videoId="8Pq-_dKtdBE" />
+      </div>
+    );
+  } catch (error) {
+    return <div>No se pudo cargar el video.</div>;
+  }
 };
 
 export default AdVideo;

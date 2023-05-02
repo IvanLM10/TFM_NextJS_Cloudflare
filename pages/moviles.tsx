@@ -16,28 +16,36 @@ type Item = {
   price: string;
 };
 
-const PER_PAGE = 2; // Elementos por página
+const PER_PAGE = 9; // Elementos que se quieren mostrar por página
+const totalCount = 22; // Elementos totales de móviles en la API
+const pageCount = Math.ceil(totalCount / PER_PAGE);
+
+const getOffset = (page: number) => (page - 1) * PER_PAGE;
 
 const Moviles = () => {
-  const [currentPage, setCurrentPage] = useState(0);
+  console.log("Renderizando Móviles...");
+  const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
     const fetchItems = async () => {
-      const res = await fetch('https://my-json-server.typicode.com/IvanLM10/json-server/moviles');
-      const data = await res.json(); // array de objetos que contiene los datos obtenidos de la API REST
-      setItems(data);
+      try {
+        const res = await fetch(`https://my-json-server.typicode.com/IvanLM10/json-server/moviles?_limit=${PER_PAGE}&_start=${getOffset(currentPage)}`);
+        if (!res.ok) {
+          throw new Error('La respuesta de la red no fue correcta');
+        }
+        const data = await res.json();
+        setItems(data);
+      } catch (error) {
+        console.error('Error al obtener los elementos:', error);
+      }
     };
     fetchItems();
-  }, []);
+  }, [currentPage]);
 
   const handlePageChange = ({ selected }: { selected: number }) => {
-    setCurrentPage(selected);
+    setCurrentPage(selected + 1);
   };
-
-  const offset = currentPage * PER_PAGE;
-  const paginatedItems = items.slice(offset, offset + PER_PAGE);
-  const pageCount = Math.ceil(items.length / PER_PAGE);
 
   return (
     <>
@@ -51,14 +59,12 @@ const Moviles = () => {
 
       <main className={styles.main}>
 
-        <div>
-          <h1>
-            MÓVILES
-          </h1>
-        </div>
+        <h1 style={{ paddingTop: '35px', paddingBottom: '30px' }}>
+          MÓVILES
+        </h1>
 
         <div>
-          <Items data={paginatedItems} />
+          <Items data={items} />
           <Pagination pageCount={pageCount} onPageChange={handlePageChange} />
         </div>
 

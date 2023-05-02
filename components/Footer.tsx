@@ -1,7 +1,9 @@
 import React from 'react'
+import Image from 'next/image';
+
 import styles from '@/styles/Footer.module.css';
 
-import Image from 'next/image';
+const logo = "/images/masmovil_amarillo.jpg";
 
 const Prueba: React.FC = () => {
     return (
@@ -57,7 +59,7 @@ const Prueba: React.FC = () => {
           </div>
 
           <div className={styles.col}>
-            <h3 className={styles.h3}><Image src="/images/masmovil_amarillo.jpg" alt="Logo Next.js" width={200} height={50}/></h3>
+            <h3 className={styles.h3}><Image src={logo} alt="Logo MasMovil" width={200} height={50}/></h3>
             <h3 className={styles.h3}>Recargas</h3>
             <h3 className={styles.h3}>Tiendas MÁSMÓVIL</h3>
             <h3 className={styles.h3}>Contacto</h3>

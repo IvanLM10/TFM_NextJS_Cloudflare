@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 
 import PageHead from '@/components/PageHead'
 import Header from '@/components/Header'
@@ -12,33 +12,41 @@ import styles from '@/styles/Home.module.css'
 type Item = {
   id: number;
   title: string;
+  price: string;
   description1: string;
   description2: string;
-  price: string;
 };
 
-const PER_PAGE = 2; // Elementos por página
+const PER_PAGE = 9; // Elementos que se quieren mostrar por página
+const totalCount = 23; // Elementos totales de tarifas en la API
+const pageCount = Math.ceil(totalCount / PER_PAGE); // Nº de páginas necesarias
+
+const getOffset = (page: number) => (page - 1) * PER_PAGE;
 
 const Tarifas = () => {
-  const [currentPage, setCurrentPage] = useState(0);
+  console.log("Renderizando Tarifas...");
+  const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
     const fetchItems = async () => {
-      const res = await fetch('https://my-json-server.typicode.com/IvanLM10/json-server/tarifas');
-      const data = await res.json();
-      setItems(data);
+      try {
+        const res = await fetch(`https://my-json-server.typicode.com/IvanLM10/json-server/tarifas?_limit=${PER_PAGE}&_start=${getOffset(currentPage)}`);
+        if (!res.ok) {
+          throw new Error('La respuesta de la red no fue correcta');
+        }
+        const data = await res.json();
+        setItems(data);
+      } catch (error) {
+        console.error('Error al obtener los elementos:', error);
+      }
     };
     fetchItems();
-  }, []);
+  }, [currentPage]);
 
   const handlePageChange = ({ selected }: { selected: number }) => {
-    setCurrentPage(selected);
+    setCurrentPage(selected + 1);
   };
-
-  const offset = currentPage * PER_PAGE;
-  const paginatedItems = items.slice(offset, offset + PER_PAGE);
-  const pageCount = Math.ceil(items.length / PER_PAGE);
 
   return (
     <>
@@ -52,14 +60,12 @@ const Tarifas = () => {
 
       <main className={styles.main}>
 
-        <div>
-          <h1>
-            TARIFAS
-          </h1>
-        </div>
+        <h1 style={{ paddingTop: '35px', paddingBottom: '25px' }}>
+          TARIFAS
+        </h1>
 
         <div>
-          <Items data={paginatedItems} />
+          <Items data={items} />
           <Pagination pageCount={pageCount} onPageChange={handlePageChange} />
         </div>
 

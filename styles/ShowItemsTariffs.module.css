@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 .item {
-    border-radius: var(--border-radius);
     border: 2px solid rgba(var(--card-border-rgb), 1);
     margin: 10px 10px;
     display: flex;
@@ -13,7 +14,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 275px;
+}
+
+.top {
     background-color: yellow;
+    width: 100%;
 }
 
 .text {
@@ -21,8 +27,19 @@
     margin: 10px 10px;
 }
 
+.price {
+    border: 2px dashed black;
+    background-color: white;
+    margin: 20px 30px 30px 30px;
+}
+
 .p {
     font-family: Poppins;
     font-size: 25px;
     font-weight: 600;
+    margin: 10px 0px 10px 0px;
+}
+
+.description {
+    margin: 20px 0px 20px 0px;
 }

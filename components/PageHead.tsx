@@ -5,10 +5,11 @@ interface Props {
   description?: string;
   keywords?: string[];
 }
-// la interfaz "Props" define los dos parámetros que necesita el componente
+// la interfaz "Props" define los parámetros que necesita el componente
 const PageHead: React.FC<Props> = ({ title, description, keywords }) => {
     return (
       <Head>
+        <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"/>
         <title>{title}</title>
         {description && <meta name="description" content={description} />} 
         {keywords && <meta name="keywords" content={keywords.join(', ')} />}
