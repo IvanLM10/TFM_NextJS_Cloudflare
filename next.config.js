@@ -12,8 +12,7 @@ const nextConfig = {
     ],
     domains: ['images.ctfassets.net'],
     loader: 'custom',
-    loaderFile: './cfImageLoader.js',
-    domains: ['tfm-nextjs-cloudflare.pages.dev'],
+    loaderFile: './cfImageLoader.js'
   }
 }
 
