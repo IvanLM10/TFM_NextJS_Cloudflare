@@ -8,6 +8,10 @@ import Footer from '@/components/Footer'
 
 import styles from '@/styles/Home.module.css'
 
+export const config = {
+  runtime: 'edge',
+}
+
 // Los datos que posee moviles en la API REST
 type Item = {
   id: number;

@@ -1,6 +1,10 @@
 import React from 'react';
 import Image, { ImageLoader } from 'next/image';
 
+export const config = {
+	runtime: 'edge',
+};
+
 const normalizeSrc = (src: string) => {
   return src.startsWith('/') ? src.slice(1) : src;
 };
@@ -20,7 +24,7 @@ const AdBanner: React.FC = () => {
       <div style={{ paddingBottom: '100px' }}>
         <Image 
           loader={cloudflareLoader}
-          src="https://images.ctfassets.net/tzu1pd8bi7co/1Flr57WezrXCKPTdLqeWZB/9dd5b582d206c219c270d110f12e7c78/banner-home-tablet_2x.jpg?fm=webp&fit=scale&w=640&h=548" 
+          src="/turtles.jpg" 
           alt="Banner Publicidad" 
           width={768} 
           height={658}
@@ -34,4 +38,5 @@ const AdBanner: React.FC = () => {
   }
 };
 //alt: descripcion que se muestra en pantalla en caso de que no se pueda mostrar la imagen
+//https://images.ctfassets.net/tzu1pd8bi7co/1Flr57WezrXCKPTdLqeWZB/9dd5b582d206c219c270d110f12e7c78/banner-home-tablet_2x.jpg?fm=webp&fit=scale&w=640&h=548
 export default AdBanner;

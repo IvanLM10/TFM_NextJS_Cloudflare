@@ -6,6 +6,10 @@ import styles from '@/styles/Header.module.css';
 
 const logo = "/images/masmovil_negro.png";
 
+export const config = {
+  runtime: 'edge',
+}
+
 const Header: React.FC = () => {
     return (
         <header className={styles.header}>
