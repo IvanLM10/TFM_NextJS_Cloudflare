@@ -1,10 +1,6 @@
 import React from 'react';
 import Image, { ImageLoader } from 'next/image';
 
-export const config = {
-	runtime: 'edge',
-};
-
 const normalizeSrc = (src: string) => {
   return src.startsWith('/') ? src.slice(1) : src;
 };

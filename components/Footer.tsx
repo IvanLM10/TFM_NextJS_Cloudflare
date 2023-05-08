@@ -5,10 +5,6 @@ import styles from '@/styles/Footer.module.css';
 
 const logo = "/images/masmovil_amarillo.jpg";
 
-export const config = {
-  runtime: 'edge',
-}
-
 const Prueba: React.FC = () => {
     return (
       <footer className={styles.footer}>
