@@ -1,8 +1,21 @@
 import React from 'react';
-import Image from 'next/image';
+import Image, { ImageLoader } from 'next/image';
 
 export const config = {
 	runtime: 'edge',
+};
+
+const normalizeSrc = (src: string) => {
+  return src.startsWith('/') ? src.slice(1) : src;
+};
+
+const cloudflareLoader: ImageLoader = ({ src, width, quality }) => {
+  const params = [`width=${width}`];
+  if (quality) {
+    params.push(`quality=${quality}`);
+  }
+  const paramsString = params.join(',');
+  return `/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`;
 };
 
 const AdBanner: React.FC = () => {
@@ -10,6 +23,7 @@ const AdBanner: React.FC = () => {
     return (
       <div style={{ paddingBottom: '100px' }}>
         <Image 
+          loader={cloudflareLoader}
           src="https://images.ctfassets.net/tzu1pd8bi7co/1Flr57WezrXCKPTdLqeWZB/9dd5b582d206c219c270d110f12e7c78/banner-home-tablet_2x.jpg?fm=webp&fit=scale&w=640&h=548" 
           alt="Banner Publicidad" 
           width={768} 
