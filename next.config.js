@@ -2,9 +2,9 @@
 const nextConfig = {
   swcMinify: true,
   reactStrictMode: true,
-  experimental: {
+  /*experimental: {
     runtime: 'edge',
-  },
+  },*/
   images: {
     remotePatterns: [
       {
@@ -14,9 +14,9 @@ const nextConfig = {
         pathname: '/tzu1pd8bi7co/1Flr57WezrXCKPTdLqeWZB/9dd5b582d206c219c270d110f12e7c78/banner-home-tablet_2x.jpg?fm=webp&fit=scale&w=640&h=548',
       },
     ],
-    domains: ['images.ctfassets.net'],
-    loader: 'custom',
-    loaderFile: './cfImageLoader.ts',
+    domains: ['images.ctfassets.net']
+    //loader: 'custom',
+    //loaderFile: './cfImageLoader.ts',
   }
 }
 
