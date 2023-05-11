@@ -17,7 +17,15 @@ const Header: React.FC = () => {
         <div className={styles.bottom}>
           <div className={styles.logo}>
             <Link href="/">
-              <Image src={logo} alt="Logo MasMovil" width={139} height={35}/>
+              <Image 
+                loader={({ src }) => {
+                  if (src.startsWith('https://')) {
+                    return src;
+                  } else {
+                    return `/images/${src}`;
+                  }
+                }}
+                src={logo} alt="Logo MasMovil" width={139} height={35}/>
             </Link>
           </div>
 
