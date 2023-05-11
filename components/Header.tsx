@@ -22,7 +22,7 @@ const Header: React.FC = () => {
                   if (src.startsWith('https://')) {
                     return src;
                   } else {
-                    return '/images/${src}';
+                    return `/images/${src}`;
                   }
                 }}
                 src={logo} alt="Logo MasMovil" width={139} height={35}/>
