@@ -1,10 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  swcMinify: true,
-  reactStrictMode: true,
-  /*experimental: {
-    runtime: 'edge',
-  },*/
+  //swcMinify: true,
+  //reactStrictMode: true,
   images: {
     remotePatterns: [
       {
