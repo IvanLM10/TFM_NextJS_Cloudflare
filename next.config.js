@@ -12,8 +12,6 @@ const nextConfig = {
       },
     ],
     domains: ['images.ctfassets.net']
-    //loader: 'custom',
-    //loaderFile: './cfImageLoader.ts',
   }
 }
 

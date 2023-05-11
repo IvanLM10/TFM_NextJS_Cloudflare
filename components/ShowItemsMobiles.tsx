@@ -17,7 +17,7 @@ const ShowItemsMobiles = ({ data }: Props) => (
             if (src.startsWith('https://')) {
               return src;
             } else {
-              return `/images/${src}`;
+              return `${src}`;;
             }
           }}
           className={styles.image} src={item.image} alt="Imagen móvil" width={170} height={170} priority/>

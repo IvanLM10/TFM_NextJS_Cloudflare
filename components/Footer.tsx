@@ -59,7 +59,16 @@ const Prueba: React.FC = () => {
           </div>
 
           <div className={styles.col}>
-            <h3 className={styles.h3}><Image src={logo} alt="Logo MasMovil" width={200} height={50}/></h3>
+            <h3 className={styles.h3}>
+              <Image 
+                loader={({ src }) => {
+                  if (src.startsWith('https://')) {
+                    return src;
+                  } else {
+                    return `${src}`;;
+                  }
+                }}
+                src={logo} alt="Logo MasMovil" width={200} height={50}/></h3>
             <h3 className={styles.h3}>Recargas</h3>
             <h3 className={styles.h3}>Tiendas MÁSMÓVIL</h3>
             <h3 className={styles.h3}>Contacto</h3>
