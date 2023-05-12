@@ -23,7 +23,6 @@ const pageCount = Math.ceil(totalCount / PER_PAGE);
 const getOffset = (page: number) => (page - 1) * PER_PAGE;
 
 const Moviles = () => {
-  console.log("Renderizando Móviles...");
   const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState<Item[]>([]);
 

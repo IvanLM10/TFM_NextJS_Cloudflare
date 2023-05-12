@@ -24,7 +24,6 @@ const pageCount = Math.ceil(totalCount / PER_PAGE); // Nº de páginas necesaria
 const getOffset = (page: number) => (page - 1) * PER_PAGE;
 
 const Tarifas = () => {
-  console.log("Renderizando Tarifas...");
   const [currentPage, setCurrentPage] = useState(1);
   const [items, setItems] = useState<Item[]>([]);
 
