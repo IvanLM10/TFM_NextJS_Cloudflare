@@ -25,7 +25,7 @@ const Header: React.FC = () => {
                     return `${src}`;;
                   }
                 }}
-                src={logo} alt="Logo MasMovil" width={139} height={35}/>
+                src={logo} alt="Logo MasMovil" width={256} height={57}/>
             </Link>
           </div>
 
