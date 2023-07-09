@@ -12,7 +12,19 @@ const nextConfig = {
       },
     ],
     domains: ['images.ctfassets.net']
-  }
-}
-
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=60', 
+          },
+        ],
+      },
+    ];
+  },
+};
 module.exports = nextConfig
