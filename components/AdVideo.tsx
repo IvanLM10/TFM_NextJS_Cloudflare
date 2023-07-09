@@ -5,7 +5,7 @@ const AdVideo: React.FC = () => {
   try {
     return (
       <div>
-        <YouTube videoId="8Pq-_dKtdBE" />
+        <YouTube videoId="8Pq-_dKtdBE" opts={{ origin: "https://tfm-nextjs-cloudflare.pages.dev/" }}/>
       </div>
     );
   } catch (error) {
